@@ -49,6 +49,9 @@
 							<span class="image main"><img src="images/pic 09.JPG" alt="" /></span>
 							<p>As someone who has a diverse background, I bring a unique blend of skills and experiences to enhance your business operations. Drawing from my past roles as a fry cook and waiter, I understand the importance of efficiency and multitasking. My housekeeping experience has honed my organizational skills, ensuring meticulous attention to detail. In my recent role as a customer service representative, I've developed excellent communication and problem-solving abilities.</p>
 							<p>Additionally, my proficiency in various tools, acquired through hands-on experience, allows me to navigate seamlessly through different platforms and systems. Having completed an online course in social media management, I am well-versed in creating engaging content, scheduling posts, and analyzing metrics to enhance your online presence.</p>
+						    <div class="navigation-buttons">
+								<div class="arrow-container"></div>
+								<button onclick="window.location.href='#skills'">Next</button>
 						</article>
 						<!-- skills -->
 						<article id="skills">
@@ -77,8 +80,9 @@
 										<li>Can Work with Minimal Supervision</li>
 										<span class="image main"><img src="images/pic 08.jpg" alt="" /></span>
 									</ul>
-								</div>
-							</div>
+							<div class="navigation-buttons">
+								<button class="back-button" onclick="window.location.href='#aboutme'">Back</button>
+								<button onclick="window.location.href='#experience'">Next</button>
 						</article>
 						<!-- experience -->
 							<article id="experience">
@@ -92,6 +96,9 @@
 								<span class="image main"><img src="images/exp (2).jpg" alt="" /></span>
 								<p>In summary, my experience has equipped me with exceptional communication skills, conflict resolution abilities, and a customer- centric mindset. I am confident in my ability to deliver outstanding service, foster positive customer relationships, and contribute to the success of any customer-centric organization.</p>
 								<span class="image main"><img src="images/exp (1).JPG" alt="" /></span>
+								<div class="navigation-buttons">
+									<button class="back-button" onclick="window.location.href='#skills'">Back</button>
+									<button onclick="window.location.href='#certification'">Next</button>
 							</article>
 						<!-- certification -->
 						<article id="certification">
@@ -106,7 +113,11 @@
 							<p>I am honored to have earned certification by consistently maintaining a 100% quality score for three consecutive months and counting. This achievement underscores my unwavering commitment to delivering exceptional service without compromising the quality of my work. Through a steadfast dedication to excellence, I strive to uphold this standard, ensuring continued success and satisfaction in every task and project I undertake.</p>
 							<span class="image main"><img src="images/Wellness Hero Certificate.jpg" alt="" /></span>
 							<p>I have achieved certification upon completing a specialized training program dedicated to promoting and maintaining a healthy mental well-being in the workplace. This training has equipped me with valuable insights and strategies to foster mental resilience, manage stress, and create a positive work-life balance. With this certification, I am committed to integrating these principles into my professional life, contributing to a healthier and more productive work environment.</p>
+							<div class="navigation-buttons">
+							<button class="back-button" onclick="window.location.href='#experience'">Back</button>
+							<button onclick="window.location.href='#work'">Next</button>
 						</article>
+						<!-- work -->
 						<article id="work">
 							<h2 class="major">Some of my Work</h2>
 							<span class="image main main-large"><img src="images/pic06.jpg" alt="" /></span>
@@ -153,31 +164,10 @@
 								<span class="image main"><img src="images/Invitation (5).jpg" alt="" /></span>
 								<span class="image main"><img src="images/Invitation (1).jpg" alt="" /></span>
 							</div>
+							<div class="navigation-buttons">
+								<button class="back-button" onclick="window.location.href='#certification'">Back</button>
+								<button onclick="window.location.href='#mygallery'">Next</button>
 						</article>
-						
-						<style>
-							/* CSS for the grid layout within the "work" article */
-							#work .image-row {
-								display: flex;
-								justify-content: space-between;
-								margin-bottom: 20px; /* Adjust as needed */
-							}
-						
-							#work .image.main {
-								width: 30%; /* Adjust as needed */
-								margin-bottom: 15px; /* Increased margin for better spacing */
-							}
-						
-							#work .image.main-large {
-								width: 100%; /* Set width to 100% to maintain original size */
-								margin-bottom: 20px; /* Adjust as needed */
-							}
-						
-							/* Additional margin for images within rows */
-							#work .image-row .image.main {
-								margin-right: 10px; /* Add margin between images within rows */
-							}
-						</style>
 						
 						<!-- mygallery -->
 							<article id="mygallery">
@@ -185,6 +175,9 @@
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>Beyond my role as a Social Media Manager, I find joy in capturing moments through photography and videography, turning my hobby into an art form. In this section, I invite you to explore a curated showcase of some of my favorite shots.</p>
 								<p>Each photograph reflects my passion for visual storytelling and my commitment to delivering captivating content across various mediums. Join me on this visual journey, where every image tells a unique story of creativity and inspiration.</p>
+								<div class="navigation-buttons">
+									<button class="back-button" onclick="window.location.href='#work'">Back</button>
+									<button onclick="window.location.href='#contact'">Next</button>
 							</article>
 						<!-- contact -->
 							<article id="contact">
@@ -203,12 +196,12 @@
 									<li><a href="https://t.me/jcsan08" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
 									<li><a href="https://www.tiktok.com/@jcsan728" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
 								</ul>
+								<div class="navigation-buttons">
+									<button class="back-button" onclick="window.location.href='#mygallery'">Back</button>
 							</article>
-
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
-
 								<section>
 									<h3 class="major">Text</h3>
 									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
@@ -465,6 +458,67 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function navigate(direction) {
+					const articles = document.querySelectorAll('article');
+					let currentIndex;
+			
+					articles.forEach((article, index) => {
+						if (article.classList.contains('active')) {
+							currentIndex = index;
+						}
+					});
+			
+					if (direction === 'next' && currentIndex < articles.length - 1) {
+						articles[currentIndex].classList.remove('active');
+						articles[currentIndex + 1].classList.add('active');
+					} else if (direction === 'back' && currentIndex > 0) {
+						articles[currentIndex].classList.remove('active');
+						articles[currentIndex - 1].classList.add('active');
+					}
+				}
+			</script>
+			
+			<style>
+				.navigation-buttons {
+					display: flex;
+					justify-content: space-between;
+					align-items: center; /* Center vertically */
+					margin-top: 20px; /* Adjust as needed */
+				}
+			
+				.back-button,
+				.next-button {
+					padding: 10px;
+					cursor: pointer;
+					display: flex;
+					align-items: center; /* Center horizontally */
+				}
+			</style>
+			<style>
+				/* CSS for the grid layout within the "work" article */
+				#work .image-row {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 20px; /* Adjust as needed */
+				}
+			
+				#work .image.main {
+					width: 30%; /* Adjust as needed */
+					margin-bottom: 15px; /* Increased margin for better spacing */
+				}
+			
+				#work .image.main-large {
+					width: 100%; /* Set width to 100% to maintain original size */
+					margin-bottom: 20px; /* Adjust as needed */
+				}
+			
+				/* Additional margin for images within rows */
+				#work .image-row .image.main {
+					margin-right: 10px; /* Add margin between images within rows */
+				}
+			</style>
 
 	</body>
 </html>
