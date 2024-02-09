@@ -1,33 +1,32 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('znunti43kpr9');
-</script>
-<!-- End of Async Drift Code -->
+		<script>
+			"use strict";
+			
+			!function() {
+			  var t = window.driftt = window.drift = window.driftt || [];
+			  if (!t.init) {
+				if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+				t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+				t.factory = function(e) {
+				  return function() {
+					var n = Array.prototype.slice.call(arguments);
+					return n.unshift(e), t.push(n), t;
+				  };
+				}, t.methods.forEach(function(e) {
+				  t[e] = t.factory(e);
+				}), t.load = function(t) {
+				  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+				  o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+				  var i = document.getElementsByTagName("script")[0];
+				  i.parentNode.insertBefore(o, i);
+				};
+			  }
+			}();
+			drift.SNIPPET_VERSION = '0.3.1';
+			drift.load('znunti43kpr9');
+			</script>
 		<title>JcSan</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -49,7 +48,7 @@ drift.load('znunti43kpr9');
 						<div class="content">
 							<div class="inner">
 								<h1>John Christopher Sanchez</h1>
-								<p>Social Media Manager / Graphic Designer / Customer Service / Virtual Assistant</p>
+								<p>Social Media Manager / Graphic Designer / Customer Service / Virtual Assistant / Web Developer</p>
 							</div>
 						</div>
 						<nav>
@@ -58,6 +57,7 @@ drift.load('znunti43kpr9');
 								<li><a href="#skills">Skills</a></li>
 								<li><a href="#experience">Experience</a></li>
 								<li><a href="#certification">Certification</a></li>
+								<li><a href="#service">Service Offered</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#mygallery">My Gallery</a></li>
 								<li><a href="#contact">Contact</a></li>
@@ -145,6 +145,13 @@ drift.load('znunti43kpr9');
 							<p>I am honored to have earned certification by consistently maintaining a 100% quality score for three consecutive months and counting. This achievement underscores my unwavering commitment to delivering exceptional service without compromising the quality of my work. Through a steadfast dedication to excellence, I strive to uphold this standard, ensuring continued success and satisfaction in every task and project I undertake.</p>
 							<span class="image main"><img src="images/Wellness Hero Certificate.jpg" alt="" /></span>
 							<p>I have achieved certification upon completing a specialized training program dedicated to promoting and maintaining a healthy mental well-being in the workplace. This training has equipped me with valuable insights and strategies to foster mental resilience, manage stress, and create a positive work-life balance. With this certification, I am committed to integrating these principles into my professional life, contributing to a healthier and more productive work environment.</p>
+							<div class="navigation-buttons">
+							<button class="back-button" onclick="window.location.href='#experience'">Back</button>
+							<button onclick="window.location.href='#work'">Next</button>
+						</article>
+						<!-- Service Offered -->
+						<article id="service">
+							<h2 class="major">Service Offered</h2>
 							<div class="navigation-buttons">
 							<button class="back-button" onclick="window.location.href='#experience'">Back</button>
 							<button onclick="window.location.href='#work'">Next</button>
