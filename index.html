@@ -727,6 +727,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				}
 			</style>
 			<style>
+	                <style>
 /* For larger screens (desktops and tablets) */
 @media (min-width: 768px) {
     /* Videos on larger screens */
@@ -738,14 +739,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     }
 
     .video-row video {
-        width: 320px; /* Adjust video thumbnail size */
+        width: 320px; /* Set fixed size for larger screens */
         height: 180px;
         object-fit: cover;
     }
 
     /* Fourth Row of Videos */
     .video-row.fourth-row video {
-        width: 240px; /* Adjust video thumbnail size */
+        width: 240px;
         height: 426px;
     }
 }
@@ -754,25 +755,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 @media (max-width: 767px) {
     /* Stack videos vertically on mobile */
     .video-row {
-        display: block;
+        display: block; /* Stack videos vertically */
         margin-top: 20px;
-        text-align: center;
     }
 
     .video-row video {
-        width: 100%; /* Make videos take full width */
+        width: 100%; /* Full width of the container */
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 15px; /* Space between videos */
-        object-fit: cover; /* Ensure proper scaling */
+        object-fit: contain; /* Make sure videos are scaled properly */
     }
 
     /* Specific adjustments for the Fourth Row (if needed) */
     .video-row.fourth-row video {
-        width: 100%; /* Make videos take full width on mobile */
-        height: auto; /* Adjust height to maintain aspect ratio */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 }
-</style>					
+</style>
 			<style>
 				/* CSS for the grid layout within the "mygallery" article */
 				#mygallery .image-row {
