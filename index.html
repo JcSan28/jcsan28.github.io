@@ -331,36 +331,36 @@
 								<span class="image main"><img src="images/vikinggs.jpg" alt="" /></span>
 								<span class="image main"><img src="images/Jshots (3).jpg" alt="" /></span> 
 							</div>
-							<!-- Fourth Row -->	 
-                                                        <!-- Three videos side-by-side with YouTube-style thumbnail sizes -->
-                                                        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-                                                         <video controls style="width: 320px; height: 180px; object-fit: cover;">
-                                                         <source src="Videos/dive.mp4" type="video/mp4">
-                                                          Your browser does not support the video tag.
-                                                          </video>
-                                                            <video controls style="width: 320px; height: 180px; object-fit: cover;">
-                                                            <source src="Videos/talamitam.mp4" type="video/mp4">
-                                                             Your browser does not support the video tag.
-                                                           </video>
-                                                          </div>
-							<!-- Fifth Row -->
-                                                        <!-- Three videos side-by-side -->     
-                                                       <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-                                                       <video controls style="width: 240px; height: 426px;">
-                                                       <source src="Videos/grill.mp4" type="video/mp4">
-                                                        Your browser does not support the video tag.
-                                                       </video>
+							<!-- Fourth Row - YouTube-style thumbnail videos -->
+<div class="video-row fourth-row">
+    <video controls>
+        <source src="Videos/dive.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-                                                      <video controls style="width: 240px; height: 426px;">
-                                                      <source src="Videos/bedhub.mp4" type="video/mp4">
-                                                       Your browser does not support the video tag.
-                                                      </video>
+    <video controls>
+        <source src="Videos/talamitam.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
-                                                     <video controls style="width: 240px; height: 426px;">
-                                                     <source src="Videos/campride.mp4" type="video/mp4">
-                                                       Your browser does not support the video tag.
-                                                      </video>
-                                                      </div>
+<!-- Fifth Row - TikTok-style vertical videos -->
+<div class="video-row fifth-row">
+    <video controls>
+        <source src="Videos/grill.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+        <source src="Videos/bedhub.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+        <source src="Videos/campride.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
                                                       <div class="navigation-buttons" style="margin-top: 30px;">
                                                       <button class="back-button" onclick="window.location.href='#work'">Back</button>
                                                      <button onclick="window.location.href='#Feedbacks'">Next</button>
@@ -728,51 +728,52 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</style>
 			<style>
 	                <style>
-/* For larger screens (desktops and tablets) */
-@media (min-width: 768px) {
-    /* Videos on larger screens */
-    .video-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .video-row video {
-        width: 320px; /* Set fixed size for larger screens */
-        height: 180px;
-        object-fit: cover;
-    }
-
-    /* Fourth Row of Videos */
-    .video-row.fourth-row video {
-        width: 240px;
-        height: 426px;
-    }
+			<style>
+/* General Video Layout */
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/* For smaller screens (mobile devices) */
+/* Fourth Row - YouTube-style thumbnail size videos (320x180px) */
+.fourth-row video {
+    width: 320px;
+    height: 180px;
+    object-fit: cover; /* Ensure videos fill the space while maintaining aspect ratio */
+}
+
+/* Fifth Row - TikTok-style vertical videos (240x426px) */
+.fifth-row video {
+    width: 240px;
+    height: 426px;
+    object-fit: cover; /* Ensure videos fill the space without stretching */
+}
+
+/* Responsive Layout for Mobile Devices */
 @media (max-width: 767px) {
-    /* Stack videos vertically on mobile */
     .video-row {
-        display: block; /* Stack videos vertically */
-        margin-top: 20px;
+        flex-direction: column; /* Stack videos vertically */
+        gap: 10px;
     }
 
-    .video-row video {
-        width: 100%; /* Full width of the container */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 15px; /* Space between videos */
-        object-fit: contain; /* Make sure videos are scaled properly */
-    }
-
-    /* Specific adjustments for the Fourth Row (if needed) */
-    .video-row.fourth-row video {
+    /* Fourth Row - YouTube-style thumbnail videos for mobile */
+    .fourth-row video {
         width: 100%; /* Full width on mobile */
         height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the video fits without distortion */
+    }
+
+    /* Fifth Row - TikTok-style vertical videos for mobile */
+    .fifth-row video {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the video fits without distortion */
     }
 }
 </style>
+	
 			<style>
 				/* CSS for the grid layout within the "mygallery" article */
 				#mygallery .image-row {
