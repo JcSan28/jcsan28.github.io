@@ -307,7 +307,6 @@
 								<button class="back-button" onclick="window.location.href='#service'">Back</button>
 								<button onclick="window.location.href='#mygallery'">Next</button>
 						</article>
-						
 						<!-- mygallery -->
 						     <article id="mygallery">
                                                         <h2 class="major">My Gallery</h2>
@@ -726,6 +725,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					margin-right: 10px; /* Add margin between images within rows */
 				}
 			</style>
+			<style>
+/* CSS for the grid layout within the "mygallery" article */
+#mygallery .video-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+#mygallery .video.main {
+    width: 30%; /* Adjust as needed */
+    margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+#mygallery .video.main-large {
+    width: 100%; /* Set width to 100% to maintain original size */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Additional margin for videos within rows */
+#mygallery .video-row .video.main {
+    margin-right: 10px; /* Add margin between videos within rows */
+}
+</style>												
 			<style>
 				/* CSS for typing animation */
 				#intro-text {
