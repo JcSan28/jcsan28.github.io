@@ -326,19 +326,18 @@
 								<span class="image main"><img src="images/shots (6).jpg" alt="" /></span>
 							</div>
 							<!-- Third Row -->
-                                                        <div class="video-row">
-                                                        <span class="video main"><video src="Videos/grill.mp4" controls></video></span>
-                                                        <span class="video main"><video src="Videos/bedhub.mp4" controls></video></span>
-                                                        <span class="video main"><video src="Videos/campride.mp4" controls></video></span>	
-                                                        </div>
-                                                        <!-- Fourth Row -->
-                                                        <div class="video-row">
-                                                        <span class="video main"><video src="Videos/talamitam.mp4" controls></video></span>
-                                                        <span class="video main"><video src="dive.mp4" controls></video></span>
-						       </div>	
-                                                       </div>
-                                                          </span>
-                                                         </div>
+                                                        <!-- Two videos side-by-side -->
+                                                       <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                                                       <video controls style="width: 240px; height: 426px;">
+                                                       <source src="videos/grill.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                       </video>
+
+                                                       <video controls style="width: 240px; height: 426px;">
+                                                       <source src="videos/your-second-video.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                       </video>
+                                                      </div>
                                                       <div class="navigation-buttons" style="margin-top: 30px;">
                                                       <button class="back-button" onclick="window.location.href='#work'">Back</button>
                                                      <button onclick="window.location.href='#Feedbacks'">Next</button>
@@ -727,29 +726,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					margin-right: 10px; /* Add margin between images within rows */
 				}
 			</style>
-			<style>
-/* CSS for the grid layout within the "mygallery" article */
-#mygallery .video-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Adjust as needed */
-}
-
-#mygallery .video.main {
-    width: 30%; /* Adjust as needed */
-    margin-bottom: 15px; /* Increased margin for better spacing */
-}
-
-#mygallery .video.main-large {
-    width: 100%; /* Set width to 100% to maintain original size */
-    margin-bottom: 20px; /* Adjust as needed */
-}
-
-/* Additional margin for videos within rows */
-#mygallery .video-row .video.main {
-    margin-right: 10px; /* Add margin between videos within rows */
-}
-</style>												
+			<style>												
 			<style>
 				/* CSS for typing animation */
 				#intro-text {
