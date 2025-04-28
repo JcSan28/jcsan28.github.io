@@ -726,6 +726,53 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				}
 			</style>
 			<style>
+/* For larger screens (desktops and tablets) */
+@media (min-width: 768px) {
+    /* Videos on larger screens */
+    .video-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .video-row video {
+        width: 320px; /* Adjust video thumbnail size */
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Fourth Row of Videos */
+    .video-row.fourth-row video {
+        width: 240px; /* Adjust video thumbnail size */
+        height: 426px;
+    }
+}
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 767px) {
+    /* Stack videos vertically on mobile */
+    .video-row {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .video-row video {
+        width: 100%; /* Make videos take full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 15px; /* Space between videos */
+        object-fit: cover; /* Ensure proper scaling */
+    }
+
+    /* Specific adjustments for the Fourth Row (if needed) */
+    .video-row.fourth-row video {
+        width: 100%; /* Make videos take full width on mobile */
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+}
+</style>					
+			<style>
 				/* CSS for the grid layout within the "mygallery" article */
 				#mygallery .image-row {
 					display: flex;
